@@ -130,7 +130,6 @@
   <ItemGroup>
     <ClCompile Include="Group.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Potok.cpp" />
     <ClCompile Include="Student.cpp" />
     <ClCompile Include="Univer.cpp" />
   </ItemGroup>

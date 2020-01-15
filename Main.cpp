@@ -30,8 +30,30 @@ GROUP определяет такие параметры как :
 
 using namespace std;
 #include "Univer.h"
-#include "Potok.cpp"
+#include <fstream>
 #include <iostream>
+
+int Potok() {
+	string s1;
+	string s[30];
+	ifstream ifs("text.txt");
+	int count = 0;
+	while (getline(ifs, s1, ' ')) {
+			s[count] = s1;
+			count++;
+	}
+	ifs.close();
+	string temp;
+	for (int i = 0; i < 30; i += 2) {
+		temp = s[i];
+		s[i] = s[i + 1];
+		s[i + 1] = temp;
+	}
+	for (int i = 0; i < 30; i++) {
+		cout << s[i] << " ";
+	}
+	return 0;
+}
 
 int main() {
 	setlocale(LC_ALL, "Rus");
@@ -60,12 +82,12 @@ int main() {
 				int group;
 				cout << "Выберите группу:" << endl;
 				for (int i = 0; i < un1.GetSize(); i++)
-					cout << "[" << i+1 << "]" << endl;
+					cout << "[" << i + 1 << "]" << endl;
 				cout << ">> ";
 				cin >> group;
 				un1.AddStudent(group);
 			}
-			else if(un1.GetSize() == 1)
+			else if (un1.GetSize() == 1)
 				un1.AddStudent(1);
 			else
 				cout << "Группы отсутствуют!" << endl;
@@ -78,7 +100,7 @@ int main() {
 				int group;
 				cout << "Выберите группу:" << endl;
 				for (int i = 0; i < un1.GetSize(); i++)
-					cout << "[" << i+1 << "]" << endl;
+					cout << "[" << i + 1 << "]" << endl;
 				cout << ">> ";
 				cin >> group;
 				un1.DelStudent(group);
@@ -93,7 +115,7 @@ int main() {
 				int group;
 				cout << "Выберите группу:" << endl;
 				for (int i = 0; i < un1.GetSize(); i++)
-					cout << "[" << i+1 << "]" << endl;
+					cout << "[" << i + 1 << "]" << endl;
 				cout << ">> ";
 				cin >> group;
 				un1.Calculate(group);
@@ -111,7 +133,7 @@ int main() {
 				int group;
 				cout << "Выберите группу:" << endl;
 				for (int i = 0; i < un1.GetSize(); i++)
-					cout << "[" << i+1 << "]" << endl;
+					cout << "[" << i + 1 << "]" << endl;
 				cout << ">> ";
 				cin >> group;
 				un1.PrintStudents(group);
@@ -121,8 +143,9 @@ int main() {
 			else
 				cout << "Студенты отсутствуют!" << endl;
 			break;
-		case 'X':
-			//
+		case 'x':
+			Potok();
+			cout << endl;
 			break;
 		}
 		system("pause");
