@@ -14,17 +14,17 @@ Student::~Student() {
 }
 
 void Student::SetStudent() {
-	cout << "Ââåäèòå ÔÈÎ:" << endl
-		<< "Èìÿ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¤Ð˜Ðž:" << endl
+		<< "Ð˜Ð¼Ñ: ";
 	cin.ignore(256, '\n');
 	getline(cin, this->Value.Name);
-	cout << "Ôàìèëèÿ: ";
+	cout << "Ð¤Ð°Ð¼Ð¸Ð»Ð¸Ñ: ";
 	getline(cin, this->Value.SurName);
-	cout << "Îò÷åñâî: ";
+	cout << "ÐžÑ‚Ñ‡ÐµÑÐ²Ð¾: ";
 	getline(cin, this->Value.LastName);
-	cout << "Ââåäèòå îöåíêó: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¾Ñ†ÐµÐ½ÐºÑƒ: " << endl;
 	cin >> this->grade;
-	cout << "Ñòóäåíò äîáàâëåí!" << endl;
+	cout << "Ð¡Ñ‚ÑƒÐ´ÐµÐ½Ñ‚ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½!" << endl;
 }
 
 int Student::GetGrade() {
