@@ -33,7 +33,7 @@ void Univer::AddStudent(int group) {
 
 void Univer::Del() {
 	if (size == 0) {
-		cout << "Ãðóïïû îòñóòñòâóþò!" << endl;
+		cout << "Ð“Ñ€ÑƒÐ¿Ð¿Ñ‹ Ð¾Ñ‚ÑÑƒÑ‚ÑÑ‚Ð²ÑƒÑŽÑ‚!" << endl;
 		return;
 	}
 	if (size == 1) {
