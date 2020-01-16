@@ -21,9 +21,9 @@ Group::~Group() {
 }
 
 void Group::SetGroup() {
-	cout << "Ââåäèòå íîìåð ãðóïïû:";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð³Ñ€ÑƒÐ¿Ð¿Ñ‹:";
 	cin >> number;
-	cout << "Ââåäèòå èçó÷àåìûé ïðåäìåò:";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð·ÑƒÑ‡Ð°ÐµÐ¼Ñ‹Ð¹ Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚:";
 	cin.ignore(256, '\n');
 	getline(cin, this->subject);
 }
@@ -48,7 +48,7 @@ void Group::Add() {
 
 void Group::Del() {
 	if (size == 0) {
-		cout << "Ãðóïïà ïóñòà!" << endl;
+		cout << "Ð“Ñ€ÑƒÐ¿Ð¿Ð° Ð¿ÑƒÑÑ‚Ð°!" << endl;
 		return;
 	}
 	if (size == 1) {
@@ -90,10 +90,10 @@ Group& Group::operator= (Group& obj) {
 }
 
 void Group::Print(ostream& out) {
-	out << endl << "Íîìåð ãðóïïû: " << number << endl
-		<< "Èçó÷àåìûé ïðåäìåò: " << subject << endl
-		<< "Ðàçìåð ãðóïïû: " << size << endl
-		<< "Ñðåäíèé áàëë: " << av_grade << endl;
+	out << endl << "ÐÐ¾Ð¼ÐµÑ€ Ð³Ñ€ÑƒÐ¿Ð¿Ñ‹: " << number << endl
+		<< "Ð˜Ð·ÑƒÑ‡Ð°ÐµÐ¼Ñ‹Ð¹ Ð¿Ñ€ÐµÐ´Ð¼ÐµÑ‚: " << subject << endl
+		<< "Ð Ð°Ð·Ð¼ÐµÑ€ Ð³Ñ€ÑƒÐ¿Ð¿Ñ‹: " << size << endl
+		<< "Ð¡Ñ€ÐµÐ´Ð½Ð¸Ð¹ Ð±Ð°Ð»Ð»: " << av_grade << endl;
 }
 
 void Group::PrintStudents() {
